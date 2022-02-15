@@ -18,14 +18,6 @@ const ItemCount = ({stock, initial, onAdd}) => {
     
 
     return(
-        /*
-        <>
-        <h3 className='border border-3 rounded-pill'>Item Count</h3>
-        <button onClick={decrement}>-</button>
-        <h3>{count}</h3>
-        <button onClick={increment}>+</button>
-        </>
-*/
     <>
         <h3 className='border border-3 rounded-pill w-25 p-3 h-25 d-inline-block'>Item Count</h3>
         <div className='container'>
