@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react'
 import ItemCount from "../ItemCount/ItemCount"
-import {traerProductos} from "../Mock/products"
+import {getProducts} from "../Mock/products"
 import ItemList from '../ItemList/ItemList'
 
 
@@ -8,7 +8,7 @@ const ItemListContainer = ({ greeting='hola mundo'}) => {
     const [products, setProducts] = useState([])
     
     useEffect(() => {
-        traerProductos
+        getProducts
         .then((resolve) => {
             setProducts(resolve)
         })
@@ -26,7 +26,7 @@ const ItemListContainer = ({ greeting='hola mundo'}) => {
 
 
     return(
-        <div className="App">
+        <div>
             <h1>{greeting}</h1>
             <ItemCount stock={5} initial={1} onAdd={handleOnAdd}/>
             <ItemList products={products}/>

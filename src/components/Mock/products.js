@@ -25,9 +25,16 @@ export const products = [
     },
 ]
 
-export const traerProductos = new Promise((resolve, reject) => {
-    setTimeout(() =>{
+export const getProducts = new Promise((resolve, reject) => {
+    setTimeout(() => {
         resolve(products)
+    }, 3000)
+
+})
+
+export const getProduct = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve(products[0])
     }, 3000)
 
 })
